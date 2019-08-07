@@ -9,19 +9,18 @@ module.exports = function(homebridge){
 
 function HttpAccessory(log, config) {
 	this.log = log;
-
-	this.url = config["url"];
+	this.url = "http://" + config["ip"] + "JQ=" + config['sensors.field'];
 	this.service = config["service"];
 	this.name = config["name"];
-  this.sensors = config["sensors"];
+  	this.sensors = config["sensors"];
 }
 
 HttpAccessory.prototype = {
   getTemperature: function(callback) {
     this.log("Temperature Triggered");
     superagent.get(this.url).end(function(err, res){
-      if (res.body['8700']['value']) {
-        callback(null, res.body['8700']['value']);
+      if (res.body[sensor.field]['value']) {
+        callback(null, res.body[sensor.field]['value']);
       } else {
         callback(null, null);
       }
@@ -30,8 +29,8 @@ HttpAccessory.prototype = {
   getHumidity: function(callback) {
     this.log("Humidity Triggered");
     superagent.get(this.url).end(function(err, res){
-      if (res.body['8310']['value']) {
-        callback(null, res.body['8310']['value']);
+      if (res.body['sensor.field]['value']) {
+        callback(null, res.body[sensor.field]['value']);
       } else {
         callback(null, null);
       }
@@ -65,7 +64,7 @@ HttpAccessory.prototype = {
           .on('get', function(callback) {
             console.log(sensor.name + " Triggered");
             superagent.get(url).end(function(err, res){
-              if (res && res.body['8700']['value']) {
+              if (res && res.body[sensor.field]['value']) {
                // callback(null, res.body[sensor.field]);
                 //callback(null, res.body['8700']['value']);
                 callback(null, res.body[sensor.field]['value']);
