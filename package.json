@@ -1,87 +1,10 @@
 {
-  "_args": [
-    [
-      "homebridge-http-json",
-      ""
-    ],
-    [
-      "homebridge-http-json",
-      ""
-    ]
-  ],
-  "_from": "homebridge-http-json",
-  "_id": "homebridge-http-json@0.0.6",
-  "_inBundle": false,
-  "_inCache": true,
-  "_installable": true,
-  "_integrity": "sha1-Xf+uwQE1wGwbMfHvOq5QT+drvkQ=",
-  "_location": "/homebridge-http-json",
-  "_nodeVersion": "5.1.1",
-  "_npmUser": {
-    "email": "mail@nunoferro.com",
-    "name": "ferro"
-  },
-  "_npmVersion": "3.3.12",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "tag",
-    "registry": true,
-    "raw": "homebridge-http-json",
-    "name": "homebridge-http-json",
-    "escapedName": "homebridge-http-json",
-    "rawSpec": "",
-    "saveSpec": null,
-    "fetchSpec": "latest"
-  },
-  "_requiredBy": [
-    "#USER"
-  ],
-  "_resolved": "https://registry.npmjs.org/homebridge-http-json/-/homebridge-http-json-0.0.6.tgz",
-  "_shasum": "5dffaec10135c06c1b31f1ef3aae504fe76bbe44",
-  "_shrinkwrap": null,
-  "_spec": "homebridge-http-json",
-  "_where": "/usr/lib/node_modules",
-  "author": {
-    "name": "Nuno Ferro",
-    "email": "mail@nunoferro.com"
-  },
-  "bugs": {
-    "url": "https://github.com/nferro/homebridge-http-json/issues"
-  },
-  "bundleDependencies": false,
-  "dependencies": {
-    "superagent": "^1.6.1"
-  },
-  "deprecated": false,
-  "description": "homebridge-http-json",
-  "devDependencies": {},
-  "directories": {},
-  "dist": {
-    "shasum": "678b28836725baefa1f318dfb24436d50f112c96",
-    "tarball": "http://registry.npmjs.org/homebridge-http-json/-/homebridge-http-json-0.0.3.tgz"
-  },
-  "engines": {
-    "homebridge": ">=0.2.0",
-    "node": ">=0.12.0"
-  },
-  "homepage": "https://github.com/nferro/homebridge-http-json",
-  "keywords": [
-    "homebridge-plugin"
-  ],
-  "license": "MIT",
+  "name": "homebridge-bsb-lan",
+  "version": "0.0.1",
   "main": "index.js",
-  "maintainers": [
-    {
-      "name": "Nuno Ferro",
-      "email": "mail@nunoferro.com"
-    }
-  ],
-  "name": "homebridge-http-json",
-  "optionalDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nferro/homebridge-http-json.git"
-  },
-  "scripts": {},
-  "version": "0.0.6"
+  "keywords": [ "homebridge-plugin" ],
+  "engines": {
+    "homebridge": ">=0.2.5",
+    "node": ">=0.12.0"
+  }
 }
