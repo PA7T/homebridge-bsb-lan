@@ -9,7 +9,7 @@ module.exports = function(homebridge){
 
 function HttpAccessory(log, config) {
 	this.log = log;
-	this.url = "http://" + config["ip"] + "JQ=" + config['sensors.field'];
+	this.url = "http://" + config["ip"] + "/" + "JQ=" + config['sensors.field'];
 	this.service = config["service"];
 	this.name = config["name"];
   	this.sensors = config["sensors"];
