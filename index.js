@@ -16,8 +16,8 @@ function HttpAccessory(log, config) {
 }
 
 HttpAccessory.prototype = {
-  //getTemperature: function(callback) {
-    this.log("Temperature Triggered");
+  getTemperature: function(callback) {
+    //this.log("Temperature Triggered");
     superagent.get(this.url).end(function(err, res){
       if (res.body[sensor.field]['value']) {
         callback(null, res.body[sensor.field]['value']);
