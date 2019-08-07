@@ -4,7 +4,7 @@ var superagent = require('superagent');
 module.exports = function(homebridge){
   Service = homebridge.hap.Service;
   Characteristic = homebridge.hap.Characteristic;
-  homebridge.registerAccessory("homebridge-http-json", "http-json", HttpAccessory);
+  homebridge.registerAccessory("homebridge-bsb-lan", "bsb-lan", HttpAccessory);
 }
 
 function HttpAccessory(log, config) {
@@ -47,9 +47,9 @@ HttpAccessory.prototype = {
     var informationService = new Service.AccessoryInformation();
 
     informationService
-      .setCharacteristic(Characteristic.Manufacturer, "Nuno Ferro")
-      .setCharacteristic(Characteristic.Model, "HTTP JSON")
-      .setCharacteristic(Characteristic.SerialNumber, "ACME#1")
+      .setCharacteristic(Characteristic.Manufacturer, "Clemens Heese")
+      .setCharacteristic(Characteristic.Model, "BSB Lan")
+      .setCharacteristic(Characteristic.SerialNumber, "6001")
 
      if (this.service == "Thermostat") {
 
