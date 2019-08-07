@@ -29,7 +29,7 @@ HttpAccessory.prototype = {
   getHumidity: function(callback) {
     this.log("Humidity Triggered");
     superagent.get(this.url).end(function(err, res){
-      if (res.body['sensor.field]['value']) {
+      if (res.body[sensor.field]['value']) {
         callback(null, res.body[sensor.field]['value']);
       } else {
         callback(null, null);
